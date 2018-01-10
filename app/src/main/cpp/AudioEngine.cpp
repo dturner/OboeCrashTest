@@ -56,7 +56,7 @@ void AudioEngine::startStream() {
 void AudioEngine::stopStream() {
 
     __android_log_print(ANDROID_LOG_DEBUG, "OboeCrashTest", "ACTION START: stop");
-    mStream->stop(1000);
+    mStream->stop();
     printStreamState();
     __android_log_print(ANDROID_LOG_DEBUG, "OboeCrashTest", "ACTION END: stop");
 
@@ -77,7 +77,7 @@ void AudioEngine::runTest() {
 
 void AudioEngine::restartStreamForever() {
 
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < 10000000; ++i) {
 
         __android_log_print(ANDROID_LOG_DEBUG, "OboeCrashTest", "Restarting stream. Run #%d", i);
 
